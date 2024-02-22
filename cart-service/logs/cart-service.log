@@ -1,0 +1,4 @@
+2024-02-22 15:18:42,887 INFO com.bookbazaar.hub.cartservice.CartServiceApplication [main] Starting CartServiceApplication using Java 17.0.8.1 on Gouse_pc with PID 12876 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\cart-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\cart-service)
+2024-02-22 15:18:42,928 DEBUG com.bookbazaar.hub.cartservice.CartServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-22 15:18:42,932 INFO com.bookbazaar.hub.cartservice.CartServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-22 15:18:58,320 INFO com.bookbazaar.hub.cartservice.CartServiceApplication [main] Started CartServiceApplication in 16.676 seconds (JVM running for 18.749)

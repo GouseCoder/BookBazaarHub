@@ -15,7 +15,9 @@ public class UserRole {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private long id;
+	
     private String name;
+    
 	public long getId() {
 		return id;
 	}
@@ -27,6 +29,10 @@ public class UserRole {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "UserRole [id=" + id + ", name=" + name + "]";
 	}
     
     

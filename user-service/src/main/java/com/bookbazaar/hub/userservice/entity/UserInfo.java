@@ -1,15 +1,20 @@
 package com.bookbazaar.hub.userservice.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
@@ -21,37 +26,66 @@ public class UserInfo implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
 
-    @Column(nullable = false, unique = true)
-    private String username;
+    @Column(nullable = false)
+    private String firstName;
+    
+    @Column(nullable = false)
+    private String lastname;
 
     @Column(nullable = false)
     private String password;
     
     @Column(nullable = false)
+    private String dateOfBirth;
+    
+    @Column(nullable = false, length = 20)
+    private Long phone;
+    
+    @Column(nullable = false, unique = true)
     private String email;
     
     @Column(nullable = false)
     private String address;
     
+    @Column(nullable = false)
+    private boolean firstLogin;
+    
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<UserRole> roles = new HashSet<>();
     
-	public Long getId() {
-		return id;
+    @ElementCollection
+    @CollectionTable(name = "last_viewed_books", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "book_id")
+    private List<Long> lastViewedBooks = new ArrayList<>();
+
+	public UserInfo() {
+		super();
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public String getUsername() {
-		return username;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getPassword() {
@@ -60,6 +94,22 @@ public class UserInfo implements Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public Long getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Long phone) {
+		this.phone = phone;
 	}
 
 	public String getEmail() {
@@ -85,6 +135,28 @@ public class UserInfo implements Serializable{
 	public void setRoles(Set<UserRole> roles) {
 		this.roles = roles;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public boolean isFirstLogin() {
+		return firstLogin;
+	}
+
+	public void setFirstLogin(boolean firstLogin) {
+		this.firstLogin = firstLogin;
+	}
+    
+	public List<Long> getLastViewedBooks() {
+        return lastViewedBooks;
+    }
+
+    public void setLastViewedBooks(List<Long> lastViewedBooks) {
+        this.lastViewedBooks = lastViewedBooks;
+    }
+    
+    
 
     
 

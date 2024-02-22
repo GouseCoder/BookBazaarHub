@@ -68,6 +68,15 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		
+		
+		<dependency>
+			<groupId>com.bookbazaar.hub</groupId>
+			<artifactId>utility-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

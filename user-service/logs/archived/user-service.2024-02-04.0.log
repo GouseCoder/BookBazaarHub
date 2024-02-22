@@ -1,0 +1,10 @@
+2024-02-04 12:18:11,408 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 11.0.19 on Gouse_pc with PID 2372 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service)
+2024-02-04 12:18:11,436 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-04 12:18:11,438 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-04 12:18:19,399 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
+2024-02-04 12:18:21,322 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 10.677 seconds (JVM running for 12.596)
+2024-02-04 12:21:28,177 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 11.0.19 on Gouse_pc with PID 7132 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service)
+2024-02-04 12:21:28,189 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-04 12:21:28,192 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-04 12:21:34,971 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
+2024-02-04 12:21:37,072 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 9.469 seconds (JVM running for 10.571)

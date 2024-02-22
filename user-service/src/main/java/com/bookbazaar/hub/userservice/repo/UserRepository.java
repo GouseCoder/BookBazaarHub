@@ -8,7 +8,7 @@ import com.bookbazaar.hub.userservice.entity.UserInfo;
 
 public interface UserRepository extends JpaRepository<UserInfo, Long>{
 	
-	 UserInfo findByUsername(String username);
+	 UserInfo findByFirstName(String username);
 	 Optional<UserInfo> findByEmail(String email);
 
 }

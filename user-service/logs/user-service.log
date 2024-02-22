@@ -1,110 +1,49 @@
-2023-12-22 23:43:40,374 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 17.0.8.1 on Gouse_pc with PID 19332 (E:\Projects\Book Bazaar\user-service\target\classes started by gouse in E:\Projects\Book Bazaar\user-service)
-2023-12-22 23:43:40,382 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
-2023-12-22 23:43:40,383 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2023-12-22 23:43:49,968 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
-2023-12-22 23:43:52,579 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 13.084 seconds (JVM running for 14.38)
-2023-12-22 23:53:25,608 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 17.0.8.1 on Gouse_pc with PID 12712 (E:\Projects\Book Bazaar\user-service\target\classes started by gouse in E:\Projects\Book Bazaar\user-service)
-2023-12-22 23:53:25,614 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
-2023-12-22 23:53:25,617 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
-2023-12-22 23:53:34,950 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
-2023-12-22 23:53:38,067 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 13.324 seconds (JVM running for 14.549)
-2023-12-22 23:55:01,886 INFO com.bookbazaar.hub.userservice.controller.UserController [http-nio-8080-exec-2] Request from user for registration : {"id":null,"username":"Gouse Shaikh","password":"Nasrin@1998","email":"gouseshaikh1999@gmail.com","address":"B1 D sangharsh nagar","roles":[{"id":0,"name":"admin"}]}
-2023-12-22 23:55:02,162 INFO com.bookbazaar.hub.userservice.service.impl.UserServiceImpl [http-nio-8080-exec-2] Email already registered
-2023-12-22 23:55:02,176 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Email already registered] with root cause
-java.lang.RuntimeException: Email already registered
-	at com.bookbazaar.hub.userservice.service.impl.UserServiceImpl.registerUser(UserServiceImpl.java:34)
-	at com.bookbazaar.hub.userservice.controller.UserController.registerUser(UserController.java:47)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at com.bookbazaar.hub.userservice.filter.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:52)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-02-22 14:39:37,428 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 11.0.19 on Gouse_pc with PID 7084 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service)
+2024-02-22 14:39:37,469 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-22 14:39:37,471 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-22 14:39:45,851 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
+2024-02-22 14:39:47,334 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configure' defined in class path resource [com/bookbazaar/hub/userservice/config/SecurityConfig.class]: Invalid factory method 'configure' on class [com.bookbazaar.hub.userservice.config.SecurityConfig]: needs to have a non-void return type!
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:623)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.bookbazaar.hub.userservice.UserServiceApplication.main(UserServiceApplication.java:10)
+2024-02-22 14:49:29,058 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 11.0.19 on Gouse_pc with PID 9732 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service)
+2024-02-22 14:49:29,063 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-22 14:49:29,064 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-22 14:49:36,178 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
+2024-02-22 14:49:38,499 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 10.08 seconds (JVM running for 11.136)
+2024-02-22 15:12:24,391 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 11.0.19 on Gouse_pc with PID 4732 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service)
+2024-02-22 15:12:24,494 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-22 15:12:24,497 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-22 15:12:38,986 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
+2024-02-22 15:12:43,532 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 20.381 seconds (JVM running for 22.106)
+2024-02-22 15:22:59,325 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Starting UserServiceApplication using Java 11.0.19 on Gouse_pc with PID 20828 (E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service\target\classes started by gouse in E:\Projects\Imp projects\Book Bazaar\BookBazaarHub\user-service)
+2024-02-22 15:22:59,358 DEBUG com.bookbazaar.hub.userservice.UserServiceApplication [main] Running with Spring Boot v2.7.8, Spring v5.3.25
+2024-02-22 15:22:59,362 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-02-22 15:23:12,090 DEBUG com.bookbazaar.hub.userservice.filter.JwtAuthFilter [main] Filter 'jwtAuthFilter' configured for use
+2024-02-22 15:23:16,497 INFO com.bookbazaar.hub.userservice.UserServiceApplication [main] Started UserServiceApplication in 18.364 seconds (JVM running for 20.199)
+2024-02-22 15:24:08,287 INFO com.bookbazaar.hub.userservice.controller.UserController [http-nio-8080-exec-2] Request from user for registration : {"userId":null,"firstName":"Gouse","lastname":"Shaikh","password":"Nasrin@1998","dateOfBirth":"24/11/1999","phone":9594198505,"email":"gouseshaikh1999@gmail.com","address":"Sangharsh Nagar, Chandivali, Andheri(E), Mumbai - 400072","otp":null,"otpfailedAttempt":0,"firstLogin":false,"roles":[{"id":0,"name":"Seller"}]}
+2024-02-22 15:24:08,882 INFO com.bookbazaar.hub.userservice.service.OtpService [http-nio-8080-exec-2] totp generated successfully 061892
+2024-02-22 15:24:14,472 INFO com.bookbazaar.hub.userservice.service.impl.UserServiceImpl [http-nio-8080-exec-2] OTP sent to user gouseshaikh1999@gmail.com
+2024-02-22 15:24:14,507 DEBUG com.bookbazaar.hub.userservice.controller.UserController [http-nio-8080-exec-2] resultNode {"dataObject":{"errorCode":200,"errorReason":"Otp sent on email succesfully!!"},"errorObject":{}}
+2024-02-22 15:24:36,092 INFO com.bookbazaar.hub.userservice.service.impl.UserServiceImpl [http-nio-8080-exec-3] generatedOtp from localstore061892
+2024-02-22 15:24:36,093 INFO com.bookbazaar.hub.userservice.service.impl.UserServiceImpl [http-nio-8080-exec-3] OTP is validated
+2024-02-22 15:25:02,808 INFO com.bookbazaar.hub.userservice.service.impl.UserServiceImpl [http-nio-8080-exec-4] UserRole UserRole [id=0, name=Seller]
+2024-02-22 15:25:03,199 INFO com.bookbazaar.hub.userservice.stores.UserRegDetailStore [http-nio-8080-exec-4] user gouseshaikh1999@gmail.com removed from UserRegDetailStore
+2024-02-22 15:26:15,485 INFO com.bookbazaar.hub.userservice.service.impl.UserDetailsServiceImpl [http-nio-8080-exec-7] User Authenticated Successfully..!!!

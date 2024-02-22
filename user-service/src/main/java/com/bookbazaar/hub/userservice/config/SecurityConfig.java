@@ -34,16 +34,19 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
-                .authorizeRequests()
+            .authorizeRequests()
                 .antMatchers("/api/v1/register", "/api/v1/login").permitAll()
-                .antMatchers("/api/v1/**").authenticated()
-                .and().sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class).build();
-
+                .antMatchers("/api/v1/logout", "/api/v1/**").authenticated()
+            .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            .and()
+                .authenticationProvider(authenticationProvider())
+            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+            .logout().logoutUrl("/api/v1/logout").invalidateHttpSession(true).disable().build();
+            
+            
     }
     
     @Bean
